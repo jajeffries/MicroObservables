@@ -1,29 +1,29 @@
-function observable(obj) {
+function observable(o) {
 	var h = {};
 
-	obj.on = function (e, fn) {
-		if(typeof fn !== "Function") return;
+	o.on = function (e, fn) {
+		if(typeof fn !== "function") return;
 		if(!h[e]) h[e] = []; 
 		h[e].push(fn);
-		return obj;
+		return o;
 	};
 
-	obj.off = function (es) {
+	o.off = function (es) {
 		es = es.split(/\s+/);
 		for (var i = 0; i < es.length; i++) {
 	      delete h[es[i]];
 	    }
-		return obj;
+		return o;
 	}
 
-	obj.trigger = function (e) { 
-		var args = arguments.slice(1),
+	o.trigger = function (e) { 
+		var args = Array.prototype.slice.call(arguments, 1);
 			fns = h[e] || [];
 		for (var i = 0; i < fns.length; i++) {
-			fns[i](args);
+			fns[i].apply(fns[i], args);
 		}
-		return obj;
+		return o;
 	}
 
-	return obj;
-}
+	return o;
+};
