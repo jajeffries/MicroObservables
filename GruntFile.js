@@ -8,6 +8,9 @@ module.exports = function(grunt) {
  					window: true
  				}
  			}
+ 		},
+ 		qunit : {
+			all: ['test/**/*.html']
  		}
  	});
 
