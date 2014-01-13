@@ -1,7 +1,7 @@
 Micro Observables
 =================
 
-Tiny simple observables heavily based on riot.js observables and jQuery/Zepto events, but without any dependencies.
+Tiny simple observables heavily based on [riot.js] [1] observables and jQuery/Zepto events, but without any dependencies.
 
 Installation
 ------------
@@ -49,11 +49,12 @@ And finally all the functions are composable, so you can do things like this
 
 Running the tests
 -----------------
-This requires that you have both [npm] and [grunt-cli] installed.
+This requires that you have both [npm] [2] and [grunt-cli] [3] installed.
 
 1. Download the latest code
 2. Run `npm install`
 3. run `grunt test`
 
-	[1]: https://npmjs.org/						"npm"
-	[2]: https://github.com/gruntjs/grunt-cli   "grunt-cli"
+	[1]: https://github.com/moot/riotjs         "riot.js"
+	[2]: https://npmjs.org/						"npm"
+	[3]: https://github.com/gruntjs/grunt-cli   "grunt-cli"
