@@ -1,0 +1,13 @@
+{
+  "name": "microObservables",
+  "version": "0.1",
+  "description": "Tiny simple observables heavily based on riot.js observables and jQuery/Zepto events, but without any dependencies.",
+  "main": "microObservables.js",
+  "repositories": [
+    {
+    "type": "git",
+    "url": "https://github.com/jajeffries/MicroObservables.git"
+  }
+  ],
+  "github": "https://github.com/jajeffries/MicroObservables"
+}
