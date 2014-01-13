@@ -11,10 +11,10 @@ window.observable = function (o) {
 	o.off = function (es) {
 		es = es.split(/\s+/);
 		for (var i = 0; i < es.length; i++) {
-	      delete h[es[i]];
-	    }
+			delete h[es[i]];
+		}
 		return o;
-	}
+	};
 
 	o.trigger = function (e) { 
 		var args = Array.prototype.slice.call(arguments, 1);
@@ -23,7 +23,7 @@ window.observable = function (o) {
 			fns[i].apply(fns[i], args);
 		}
 		return o;
-	}
+	};
 
 	return o;
 };
