@@ -1,4 +1,4 @@
-function observable(o) {
+window.observable = function (o) {
 	var h = {};
 
 	o.on = function (e, fn) {
@@ -27,3 +27,9 @@ function observable(o) {
 
 	return o;
 };
+
+if (typeof window.define === "function" && window.define.amd) {
+  window.define("micorObservables", [], function() {
+    return window.observable;
+  });
+}
