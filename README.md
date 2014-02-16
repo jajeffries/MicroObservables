@@ -5,12 +5,20 @@ Tiny simple observables heavily based on [riot.js] [1] observables and jQuery/Ze
 
 Installation
 ------------
-Just copy the microObservables.js file into your project.
+Just copy the microObservables.js file into your project directory.
 
 Usage
 -----
 
-Just call `observable` passing any POJO that you want to be able to observe.
+When working in Node.JS, you must call the following to use it in your project.
+
+	var observable = require("./microObservable.js");
+
+For a HTML project, you can include it as follows:
+
+	<script src="./microObservables.js"></script>
+
+Now you are ready to begin, you can call `observable` passing any POJO that you want to be able to observe.
 
 	function MyObject () {
 		observable(this);
