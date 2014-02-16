@@ -1,4 +1,4 @@
-window.observable = function (o) {
+var observable = function (o) {
 	var h = {};
 
 	o.on = function (e, fn) {
@@ -28,8 +28,13 @@ window.observable = function (o) {
 	return o;
 };
 
-if (typeof window.define === "function" && window.define.amd) {
-  window.define("micorObservables", [], function() {
-    return window.observable;
-  });
+if (typeof exports === 'undefined') {
+  window.observable = observable;
+  if (typeof window.define === "function" && window.define.amd) {
+    window.define("microObservables", [], function() {
+      return window.observable;
+    });
+  }
+} else {
+  module.exports = observable;
 }
